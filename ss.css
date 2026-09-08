@@ -1,0 +1,347 @@
+/* HEADER */
+* {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.caacupe-one-regular {
+  font-family: "Caacupe One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.dynapuff-unfiltered {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+header{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Caacupe One", sans-serif;
+}
+.logo h1{
+    font-size: 50px;
+    color: rgb(221, 188, 0);
+}
+nav{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    margin-left: 30px;
+    
+}
+.icons{
+    display: flex;
+    margin-left: auto;   
+    gap: 20px;   
+    img{
+        width: 30px;
+        height: 30px;
+    }
+}
+.icons img:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
+.navbar{
+    display: flex;
+    align-items: end;
+    gap : 150px;
+    list-style: none;
+  
+}
+.navbar a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: "Caacupe One", sans-serif;
+    font-weight: 500;
+    padding: 5px 0;
+    transition: all 0.3s ease;
+    
+}
+
+.navbar a:hover{
+    color: rgb(221, 188, 0);
+}
+
+
+/* MAIN */
+
+/* ============================================
+   PRODUCTS SECTION
+   ============================================ */
+
+.products-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+.section-title {
+    font-family: "Caacupe One", sans-serif;
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: rgb(221, 188, 0);
+    margin: 10px auto 0;
+}
+
+/* Products Grid */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Product Card */
+.product-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+    border: 1px solid #eee;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-family: "DynaPuff", system-ui;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.product-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.product-price {
+    font-family: "Caacupe One", sans-serif;
+    font-size: 22px;
+    color: rgb(221, 188, 0);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.add-to-cart {
+    background: rgb(221, 188, 0);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a1a1a;
+    transition: all 0.3s;
+}
+
+.add-to-cart:hover {
+    background: #c4a800;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   PRODUCTS - RESPONSIVE
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 26px;
+    }
+    
+    .product-image {
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .products-section {
+        padding: 10px 15px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .product-card {
+        padding: 15px;
+    }
+    
+    .product-image {
+        height: 180px;
+    }
+}
+
+
+
+/* FOOTER */
+.sortselection {
+    display: flex;           /* Puts label and dropdown in a row */
+    align-items: center;     /* Vertically centers them */
+    gap: 10px;              /* Space between label and dropdown */
+    padding: 10px 30px;     /* Space inside the container */
+    margin: 10px 0;         /* Space outside the container */
+}
+
+.sortselection label {
+    font-size: 16px;        /* Text size */
+    font-weight: 500;       /* Makes it slightly bold */
+    color: #333;            /* Dark gray color */
+}
+
+.sortselection select {
+    padding: 8px 15px;      /* Space inside the dropdown */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 5px;     /* Rounded corners */
+    font-size: 14px;        /* Text size */
+    background-color: white; /* White background */
+    cursor: pointer;        /* Changes mouse to hand icon */
+}
+
+.sortselection select:hover {
+    border-color: #999;     /* Darker border on hover */
+}
+
+.sortselection select:focus {
+    outline: none;          /* Removes default blue outline */
+    border-color: rgb(221, 188, 0);  /* Gold border when clicked */
+}
+hr{
+    max-width: 100%;
+}
+
+
+/* Main footer container */
+footer {
+    background: #1a1a1a;        /* Dark background */
+    color: #fff;                /* White text */
+    padding: 40px 30px 20px;    /* Space inside footer */
+    margin-top: 40px;           /* Space above footer */
+}
+
+/* The 4-column layout */
+.footer-content {
+    display: flex;              /* Puts sections in a row */
+    justify-content: space-between; /* Spreads them out */
+    flex-wrap: wrap;            /* Wraps on small screens */
+    gap: 30px;                 /* Space between sections */
+    max-width: 1200px;          /* Maximum width */
+    margin: 0 auto;             /* Centers it */
+    padding-bottom: 20px;       /* Space before copyright */
+    border-bottom: 1px solid #333; /* Gold line separator */
+}
+
+/* Each individual section */
+.footer-section {
+    flex: 1;                    /* Each takes equal space */
+    min-width: 150px;           /* Minimum width before wrapping */
+}
+
+/* Brand name (JINZHONG) */
+.footer-section h3 {
+    color: rgb(221, 188, 0);    /* Gold color - matches your brand */
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: "Caacupe One", sans-serif;
+}
+
+/* Section titles (Quick Links, Follow Us, Contact) */
+.footer-section h4 {
+    color: rgb(221, 188, 0);    /* Gold color */
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-family: "DynaPuff", sans-serif;
+}
+
+/* Paragraph text */
+.footer-section p {
+    color: #aaa;                /* Light gray */
+    line-height: 1.6;           /* Space between lines */
+    font-size: 14px;
+}
+
+/* List styling - removes bullets */
+.footer-section ul {
+    list-style: none;           /* Removes bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+/* Each list item */
+.footer-section ul li {
+    margin-bottom: 8px;         /* Space between links */
+}
+
+/* Links in the footer */
+.footer-section ul li a {
+    color: #aaa;                /* Light gray */
+    text-decoration: none;      /* Removes underline */
+    font-size: 14px;
+    transition: color 0.3s;     /* Smooth color change */
+}
+
+/* Hover effect on links */
+.footer-section ul li a:hover {
+    color: rgb(221, 188, 0);    /* Turns gold on hover */
+}
+
+/* ============================================
+   FOOTER BOTTOM (Copyright)
+   ============================================ */
+
+.footer-bottom {
+    text-align: center;         /* Centers the text */
+    padding-top: 20px;          /* Space above */
+    max-width: 1200px;          /* Same max width */
+    margin: 0 auto;             /* Centers it */
+}
+
+.footer-bottom p {
+    color: #666;                /* Dark gray */
+    font-size: 14px;
+}
